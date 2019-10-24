@@ -1,0 +1,975 @@
+\documentclass[12pt,a4paper,openany,cap]{ctexbook}
+\usepackage{picins}
+% \usepackage[space,noindent]{ctex}
+\usepackage{graphicx}
+\usepackage{subfig,cases}
+\usepackage{color,xcolor,fancybox}
+\usepackage{amsfonts}
+\usepackage{array,longtable,colortbl,booktabs}
+\usepackage[text={140mm,240mm},margin=24mm,centering]{geometry}
+\newcolumntype{A}{|>{\songti\bf \zihao 4 \columncolor[gray]{.8}}p{35mm}|>{\songti\centering \zihao
+        5}p{40mm}|>{\songti\bf  \columncolor[gray]{.9} \zihao 4}p{35mm}|>{\songti \zihao
+        5}p{34mm}|}
+ \newcolumntype{B}{|>{\songti\centering \zihao 5 }p{10mm}|>{\songti\centering \zihao
+        5}p{55mm}|>{\songti   \columncolor[gray]{.8} \zihao
+        5}p{55mm}|>{\songti  \zihao
+        5 \columncolor[gray]{.9}}p{25mm}|}
+    \begin{document}
+    \pagestyle{empty}
+    \begin{center}
+ \includegraphics[height=3.5cm]{chenfangnf}\\     
+{\zihao 2 \songti \textbf{ [大数据分析与应用]\\
+    本科课程教学大纲（文学、外语、经济、管理、艺术类）
+}}%\footnote{此表一式三份，于开学两周内填好，一份送教务与科研部，一份开课单位留存，一份自留。}
+\end{center}\bigskip
+\renewcommand{\arraystretch}{1.7}
+\begin{center}
+  \begin{tabular}[h]{A}
+    \hline   
+\multicolumn{4}{|>{\columncolor[gray]{0.8}}c|}{\zihao{3}\textbf{课程信息}}\\\hline
+开课单位：&商学院 & 开课学年学期&2019-2020\ 第一学期\\ \hline
+授课年级：&2016级 & 授课对象专业&  电子商务 \\ \hline
+课程学分& 3 & 课程学时& 66 \\ \hline
+课程性质&\multicolumn{3}{l|}{
+  \begin{minipage}{0.7\linewidth}
+    \zihao{5} $\Box$ 专业必修 $\Box$专业选修$\Box$ 公共必修$\Box$ 公共选修$\Box$ 成长必修$\surd$ 专业限选$\Box$ 公共限选
+  \end{minipage}
+         } \\ \hline
+先修课程要求&\multicolumn{3}{l|}{计算机基础,统计学
+         } \\ \hline    
+  \multicolumn{4}{|>{\columncolor[gray]{0.8}}c|}{\zihao{3}\textbf{教师信息}}\\\hline
+授课教师& 陈放& 联系电话 & 1591878369  \\ \hline
+答疑地点& 8教-110& 答疑时间& 提前预约 \\ \hline
+电子邮箱：& \multicolumn{3}{l|}{math\_{chen}@126.com } \\ \hline
+\multicolumn{4}{l}{\zihao{4} \textbf{主 \quad \quad 审：}}
+\end{tabular}
+\end{center}
+\newpage
+\section{课程描述}
+\begin{enumerate}
+\item 大数据时代已经到来，在商业、经济及其他领域中基于数据和分析去发现问题并做出科学、客观的决策越来越重要。数据分析技术将帮助企业用户在合理时间内获取、管理、处理以及整理海量数据，为商业决策提供积极的帮助。数据分析作为一门前沿技术，广泛应用于物联网、云计算、移动互联网等战略新兴产业。有实践经验的数据分析人才已经成为了各企业争夺的热门。为了推动商学院大数据，人工智能行业的发展，满足日益增长的数据分析人才需求，特开设大数据分析与应用课程，大数据不能空谈，因此本课程所采用的软件为当前使用非常广泛和免费的python软件为工具，通过理论与实践结合的方式讲授该课程。
+\item\label{item:21} 通过本课程的学习，使学生学会使用Python进行科学计算、可视化绘图、数据处理，分析与建模，并详细拆解学习聚类、回归、分类三个企业案例，将理论与实践相结合，为将来从事商业领域数据分析挖掘研究、工作，奠定基础，并为同学的毕业论文中数据分析方面问题提供技术支持。
+\item\label{item:22} 考核方式：期末试卷成绩*$40\%$+平时成绩*$60\%$
+  \begin{enumerate}
+  \item 出勤率：    $10  \%   $
+\item\label{item:23} 课堂提问：   $10 \% $
+\item\label{item:40} 上机考核 ：     $30\%$
+\item\label{item:41} 作业：   $10  \%$
+\item\label{item:42} 期末考试：   $40  \%$
+  \end{enumerate}
+\end{enumerate}
+\section{课程目标}
+\begin{center}
+  \zihao{4} \textbf{第1 章\quad Python数据分析概述}
+\end{center}
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+     \begin{enumerate}
+  \item      数据分析的概念、流程与应用场景。
+\item\label{item:48}    Python常用的数据分析库。
+\item\label{item:49}      Windows/Linux系统下Anaconda安装。
+\item\label{item:50}      Jupyter Notebook的常用功能。
+  \end{enumerate}
+  \end{minipage}
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+  \item     了解数据分析的概念。
+\item\label{item:43}  了解数据分析的流程。
+\item\label{item:44}  了解数据分析在实际中的应用。
+\item\label{item:45}  了解Python在数据分析的优势。
+\item\label{item:46}  了解Python常用的数据分析库。
+\item\label{item:47}  掌握Windows／Linux系统下Anaconda的安装。
+  \end{enumerate}
+  \end{minipage}
+\item[教学重点与难点]   
+       重点:     （1） 数据分析的概念、流程与应用场景。
+    （2） Jupyter Notebook的常用功能
+.难点:数据分析的概念与流程.
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[问题]
+  \begin{description}
+  \item[1. 引导性提问]             
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item  数据分析能够做什么？
+\item\label{item:51}  现实生活中存在哪些数据分析技术？
+\item\label{item:52}  该如何进行数据分析？
+\item\label{item:53}  Python语言有哪些优势？
+\item\label{item:54}  Pycahrm这个PythonIDE有那些优点和缺点？
+\end{enumerate}
+\item[2. 探究性问题] 
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item  数据分析的完整流程是怎样的？
+\item\label{item:55}  数据分析的能够应用在那些场景？
+\item\label{item:56}      Jupyter Notebook的哪些优缺点？
+\end{enumerate}
+\item[ 3. 拓展性问题] 
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item      数据分析是不是万能的？
+\item\label{item:57}  Python语言用于做数据分析有哪些优势？
+\item\label{item:58}      分析本班人员的基本信息可以从哪些角度入手？
+\end{enumerate}
+\end{description}
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item     数据分析的概念。
+\item\label{item:59}  数据分析的流程。
+\item\label{item:60}  数据分析的应用场景。
+\item\label{item:61}  数据分析的常用工具。
+\item\label{item:62}  Python数据分析的优势。
+\item\label{item:63}  Python数据分析的常用类库。
+\item\label{item:64}  Python的Anaconda发行版。
+\item\label{item:65}  在Windows操作系统上安装Anaconda。
+\item\label{item:66}  在Linux系统上安装Anaconda。
+\item\label{item:67}  Jupyter Notebook的基础功能。
+\item\label{item:68}  Jupyter Notebook的高级功能。
+    \end{enumerate}
+  \end{minipage}
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item      在Windows/Linux系统上安装Anaconda。
+\item\label{item:69}  利用Jupyter Notebook来重写教材第二章内容。
+    \end{enumerate}
+  \end{minipage}
+\end{description}
+\begin{center}
+  \zihao{4} \textbf{第2 章\quad NumPy数值计算基础}
+\end{center}
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  NumPy创建多维数组与生成随机数的方法。
+\item\label{item:4}  数组的索引与转换。
+\item\label{item:5}  NumPy中数组矩阵的运算及通用函数的基本使用方法。
+\item\label{item:6}  NumPy统计分析的方法。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item        掌握NumPy创建多维数组与生成随机数的方法。
+\item\label{item:7}  掌握数组的索引与转换。
+\item\label{item:8}  了解NumPy中数组矩阵的运算及通用函数的基本使用方法。
+\item\label{item:9}  掌握NumPy统计分析的方法。
+    \end{enumerate}
+  \end{minipage}
+  \item[教学重点与难点]
+            重点:
+    （1） ndarray对象的创建与生成随机数的方法。
+    （2） 数组的索引与变换。
+    （3） 矩阵的运算及通用函数的基本使用方法。
+            难点:
+    （1） ndarray对象的创建与生成随机数的方法。
+    （2） 数组的索引与变换。    
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[问题]
+
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{description}
+    \item[1. 引导性提问]
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item  NumPy从这个库的名字理解，这个库的作用是什么？
+\item\label{item:10}  数组内部存放的数据是否可以为字符串？
+\item\label{item:11}  怎样取出数组内部的某个元素？
+\item\label{item:12}  数组和矩阵是否可以转换
+\end{enumerate}
+\item[2. 探究性问题] 
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item  数组和矩阵的异同点？
+\item\label{item:13}  数组和矩阵能否互相转换？
+\item\label{item:14}  能否自定义ufunc？
+\end{enumerate}
+\item[3. 拓展性问题] 
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item  使用NumPy能否进行本班人员的基本信息？
+\item\label{item:15}  如何将所有的分析方法做成一个ufunc？
+\end{enumerate}
+    \end{description}
+  \end{minipage}
+  \item[讲授教学环节]
+    \begin{minipage}[t]{0.8\linewidth}
+      \begin{enumerate}
+      \item         创建数组对象。
+\item\label{item:16}  生成随机数。
+\item\label{item:17}  通过索引访问数组。
+\item\label{item:71}  变换数组的形态。
+\item\label{item:72}  创建NumPy矩阵。
+\item\label{item:73}  ufunc函数。
+\item\label{item:74}  读写文件。
+\item\label{item:75}  使用数组进行简单的统计分析。
+      \end{enumerate}
+    \end{minipage}
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  创建NumPy数组对象ndarray。
+\item\label{item:76}  查看ndarray的常用属性。
+\item\label{item:77}  花式索引ndarray。
+\item\label{item:78}  变换ndarray的形态。
+\item\label{item:79}  创建NumPy矩阵并使用。
+\item\label{item:80}  使用常见ufunc。
+\item\label{item:81}  使用NumPy读写文件。
+    \end{enumerate}
+  \end{minipage}
+  
+\end{description}
+
+\begin{center}
+  \zihao{4} \textbf{第3 章\quad Matplotlib数据可视化基础}
+\end{center}
+
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  pyplot常用绘图参数调节。
+\item\label{item:82}  子图的绘制方法。
+\item\label{item:83}  散点图和折线图的作用与绘制方法。
+\item\label{item:84}  直方图和饼图绘制的作用与绘制方法。
+\item\label{item:85}  箱线图和茎叶图的作用与绘制方法。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  掌握pyplot常用绘图参数调节。
+\item\label{item:86}  掌握子图的绘制方法。
+\item\label{item:87}  掌握散点图和折线图的作用与绘制方法。
+\item\label{item:88}  掌握直方图和饼图绘制的作用与绘制方法。
+\item\label{item:89}  掌握箱线图和茎叶图的作用与绘制方法。
+    \end{enumerate}
+  \end{minipage}
+
+  \item[教学重点与难点]
+                 重点:
+    （1） pyplot的基础语法。
+    （2） 散点图和折线图的作用与绘制方法。
+    （3） 直方图、饼图和箱线图的作用与绘制方法。
+            难点:
+    （1） 子图的绘制方法。
+    （2） 散点图和折线图的作用与绘制方法。
+    （3） 直方图、饼图和箱线图的作用与绘制方法。
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[问题]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{description}
+    \item[1. 引导性提问]
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item  图形和文字哪一种更容易让大脑记住？
+\item\label{item:90}  常见的统计学图形有哪些？
+\item\label{item:91}  不同的图形所表示的意义是否相同？
+\end{enumerate}
+            
+\item[2. 探究性问题] 
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item 散点图，折线图的主要功能是什么，有什么异同点？
+\item\label{item:92}  饼图，直方图的主要功能是什么，有什么异同点？
+\item\label{item:93}  箱型图的主要功能是什么？
+\end{enumerate}
+ 
+\item[3. 拓展性问题] 
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item     能否绘制一个雷达图，该怎么做？
+\item\label{item:94}  如何将本班同学的数据做可视化？
+\end{enumerate}
+    \end{description}
+  \end{minipage}
+  
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item   pyplot的基础语法。
+\item\label{item:95}  设置pyplot的动态rc参数。
+\item\label{item:96}  绘制散点图。
+\item\label{item:97}  绘制折线图。
+\item\label{item:98}  绘制直方图。
+\item\label{item:99}  绘制饼图。
+\item\label{item:100}  绘制箱线图。
+\item\label{item:18} 数学软件作图方法一般性介绍。
+\item\label{item:19} pyplot在数据分析中的实际应用举例分析  
+    \end{enumerate}
+  \end{minipage}
+
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  设置pyplot的动态rc参数。
+\item\label{item:101}  绘制散点图；绘制折线图。
+\item\label{item:102}  绘制直方图。
+\item\label{item:103}  绘制饼图。
+\item\label{item:104}  绘制箱线图。
+    \end{enumerate}
+  \end{minipage}
+
+\end{description}
+
+
+
+\begin{center}
+  \zihao{4} \textbf{第4 章\quad pandas统计分析基础}
+\end{center}
+
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  常见的数据读取方式。
+\item\label{item:105}  DataFrame常用属性与方法。
+\item\label{item:106}  基础时间数据处理方法。
+\item\label{item:107}  分组聚合的原理与方法。
+\item\label{item:108}  透视表与交叉表的制作。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 掌握常见的数据读取方式。
+\item\label{item:109}  掌握DataFrame常用属性与方法。
+\item\label{item:110}  掌握基础时间数据处理方法。
+\item\label{item:111}  掌握分组聚合的原理与方法。
+\item\label{item:112}  掌握透视表与交叉表的制作。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学重点与难点]    重点:
+    （1） 读写数据。
+    （2） DataFrame数据的常用属性与方法。
+    （3） 基础时间数据处理方法。
+    （4） 分组聚合的原理与方法。
+    （5） 透视表与交叉表的制作。
+             难点:
+    （1） 读写数据。
+    （2） 分组聚合的原理与方法。
+    （3） 透视表与交叉表的制作。
+  \item[问题]
+    \begin{minipage}[t]{0.8\linewidth}
+      \begin{description}
+      \item[ 1. 引导性提问]
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item     数据分析中常见的结构话数据读取方式有那些？
+\item\label{item:113}  DataFrame和数组有什么相似之处？
+\item\label{item:114}  Excel透视表如何制作？
+\end{enumerate}
+\item[2. 探究性问题] 
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item   读取数据库数据为什么需要别的库？
+\item\label{item:115}  时间数据中存在哪些信息？
+\item\label{item:116}  以百万级的数据为例，Excel制作透视表和Python制作透视表哪个速度更快？
+\end{enumerate}
+\item[3. 拓展性问题] 
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item  能否读取word数据，该如何做？
+\end{enumerate}
+\end{description}
+    \end{minipage}
+
+  \item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item    读写数据库数据。
+\item\label{item:118}  读写文本文件。
+\item\label{item:119}  读写Excel文件。
+\item\label{item:120}  查看DataFrame的常用属性。
+\item\label{item:121}  查改增删DataFrame数据。
+\item\label{item:128}  使用apply方法聚合数据。
+\item\label{item:129}  使用transform方法聚合数据。
+\item\label{item:130}  使用$povit\_table$函数创建透视表。
+\item\label{item:131}  使用$crosstab$函数创建交叉表实验教学过程。
+  \end{enumerate}
+  \end{minipage}
+
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  读写数据库数据。
+\item\label{item:132}  读写文本文件。
+\item\label{item:133}  读写Excel文件。
+\item\label{item:139}  加减时间数据。
+\item\label{item:140}  使用groupby方法拆分数据。
+\item\label{item:141}  使用agg，apply，transform方法聚合数据。
+\item\label{item:142}  制作透视表。
+\item\label{item:143}  制作交叉表。
+    \end{enumerate}
+  \end{minipage}
+
+  
+\end{description}
+
+\begin{center}
+  \zihao{4} \textbf{第5 章\quad 使用pandas进行数据预处理 }
+\end{center}
+
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 数据清洗的基本方法。
+\item\label{item:144}  数据合并的原理与方法。
+\item\label{item:145}  数据标准化的概念与方法。
+\item\label{item:146}  常用的数据变换方法。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 掌握数据清洗的基本方法。
+\item\label{item:147}  掌握数据合并的原理与方法。
+\item\label{item:148}  掌握数据标准化的概念与方法。
+\item\label{item:149}  掌握常用的数据变换方法。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学重点与难点]    重点:
+    （1） 数据合并。
+    （2） 数据清洗。
+    （3） 数据标准化。
+    （4） 数据转换。
+ 难点:
+    （1） 数据清洗。
+    （2） 数据转换。
+\item[问题]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{description}
+    \item[ 1. 引导性提问]          
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item     数据质量不高的情况下如何提高数据质量？
+\item\label{item:150}  数据预处理包含哪些内容？
+\item\label{item:151}  数据预处理各个步骤是否有先后？
+\end{enumerate}
+            
+\item[2. 探究性问题] 
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item    重复值是否一定要做清洗？
+\item\label{item:152}  时间数据中存在哪些信息？
+\item\label{item:153}  数据变换的目的是什么？
+\end{enumerate}
+\item[3. 拓展性问题] 
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item  除了哑变量处理外，还有那些方法可以处理离散型特征？
+\item\label{item:154}  能否将这些方法写成自定义函数？ 
+\end{enumerate}
+    \end{description}
+  \end{minipage}
+
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item   堆叠合并数据。
+\item\label{item:155}  主键合并数据。
+\item\label{item:156}  重叠合并数据。
+\item\label{item:157}  检测与处理重复值。
+\item\label{item:161}  标准差标准化数据。
+\item\label{item:162}  小数定标标准化数据。
+\item\label{item:163}  哑变量处理类别型数据。
+\item\label{item:164}  离散化连续型数据。
+    \end{enumerate}
+  \end{minipage}
+
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 堆叠、主键、重叠合并数据。
+\item\label{item:165}  检测与处理重复值，缺失值，异常值。
+\item\label{item:166}  离差标准化、标准差标准化。
+\item\label{item:167}  小数定标标准化数据。
+\item\label{item:168}  哑变量处理类别型数据。
+\item\label{item:169}  离散化连续型数据。
+    \end{enumerate}
+  \end{minipage}
+\end{description}
+
+
+\begin{center}
+  \zihao{4} \textbf{第6 章\quad 使用sklearn构建模型}
+\end{center}
+
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item sklearn转换器，评估器的使用。
+\item\label{item:170}  sklearn数据标准化与数据划分。
+\item\label{item:171}  sklearn中聚类，分类，回归模型的构建。
+\item\label{item:172}  sklearn中聚类，分类，回归模型的评价。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 掌握sklearn转换器，评估器的使用。
+\item\label{item:173}  掌握sklearn数据标准化与数据划分。
+\item\label{item:174}  掌握sklearn中聚类，分类，回归模型的构建。
+\item\label{item:175}  掌握sklearn中聚类，分类，回归模型的评价。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学重点与难点]    重点:
+    （1） sklearn转换器的使用方法。
+    （2） sklearn估计器的使用方法。
+    （3） 聚类模型的构建与评价。
+    （4） 分类模型的构建与评价。
+    （5） 回归模型的构建与评价。
+ 难点:
+    （1） sklearn转换器的使用。
+    （2） sklearn估计器的使用。
+    （3） 分类模型构建。
+    （4） 回归模型构建。
+\item[问题]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{description}
+    \item[1. 引导性提问]             
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item     常见的模型算法使用场景有哪些？
+\item\label{item:176}  不同的场景之间有什么区别？
+\item\label{item:177}  scikit-learn名字的由来？
+\end{enumerate}
+\item[2. 探究性问题]
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item     scikit-learn的标准化和第5章的有何不同？
+\item\label{item:178}  聚类和分类的区别是什么？
+\item\label{item:179}  回归和分类的区别又是什么？
+\end{enumerate}
+\item[3. 拓展性问题]
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item     不同的算法，可解释性不同，能否挑选一种可解释性强的算法对算法结果进行解释？
+\item\label{item:180}  除了PCA降维以外，可以使用RandomForest模型进行特征的筛选，该如何做？ 
+\end{enumerate}
+    \end{description}
+  \end{minipage}
+
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item   加载datasets模块中的数据集。
+\item\label{item:181}  将数据集划分为训练集和测试集。
+\item\label{item:182}  使用sklearn转换器进行数据预处理与降维。
+\item\label{item:183}  使用sklearn估计器构建聚类模型。
+\item\label{item:187}  使用sklearn估计器构建回归模型。
+\item\label{item:188}  评价回归模型。
+    \end{enumerate}
+  \end{minipage}
+
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 加载datasets模块自带数据集。
+\item\label{item:189}  划分数据集。
+\item\label{item:190}  使用sklearn转换器进行数据预处理与降维。
+\item\label{item:191}  构建与评价聚类模型。
+\item\label{item:192}  构建与评价分类模型。
+\item\label{item:193}  构建与评价回归模型。
+    \end{enumerate}
+  \end{minipage}
+
+  
+\end{description}
+
+\begin{center}
+  \zihao{4} \textbf{第7章\quad 航空公司客户价值分析}
+\end{center}
+
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  RFM模型的基本原理。
+\item\label{item:194}  K-Means算法的基本原理与使用方法。
+\item\label{item:195}  比较不同类别客户的客户价值，制定相应的营销策略。
+  
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  了解RFM模型的基本原理。
+\item\label{item:196}  掌握K-Means算法的基本原理与使用方法。
+\item\label{item:197}  比较不同类别客户的客户价值，制定相应的营销策略。
+    \end{enumerate}
+  \end{minipage}
+
+  \item[教学重点与难点]  重点:
+    （1） 航空客户价值分析的步骤和流程。
+    （2） RFM模型的基本原理。
+    （3） K-Means算法的基本原理与使用方法。
+    （4） 比较不同类别客户的客户价值。
+ 难点:
+    （1） RFM模型的基本原理。
+    （2） KMeans算法的基本原理与使用方法。
+    
+\item[问题]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{description}
+    \item[1. 引导性提问]             
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item  什么样的客户是航空公司的高价值客户？
+\item\label{item:198}  航空公司能够提供什么样的数据？
+\item\label{item:199}  为什么航空公司要做客户价值分析？
+\end{enumerate}
+\item[2. 探究性问题] 
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item  RFM模型对应的特征在本案例中是什么？
+\item\label{item:200}  为什么RFM模型不能够很好区分用户？
+\item\label{item:201}  为何KMeans可以用作客户分类？
+\end{enumerate}
+\item[3. 拓展性问题]
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item      除了RFM模型外还有什么用于客户分类的模型？
+\item\label{item:202}  除了KMeans还有什么算法能够用于客户分类？ 
+\end{enumerate}
+    \end{description}
+  \end{minipage}
+
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 分析航空公司现状。
+\item\label{item:203}  认识客户价值分析。
+\item\label{item:204}  熟悉航空客户价值分析的步骤与流程。
+\item\label{item:205}  处理缺失值与异常值。
+\item\label{item:206}  构建爱你航空客户价值分析关键特征。
+\item\label{item:207}  标准化LRFMC 5个特征。
+\item\label{item:208}  了解K-Means聚类算法。
+\item\label{item:209}  分析聚类结果。
+\item\label{item:210}  模型应用。
+    \end{enumerate}
+  \end{minipage}
+
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 处理数据缺失值与异常值。
+\item\label{item:211}  构建航空客户价值分析的关键特征。
+\item\label{item:212}  标准化LRFMC 5个特征。
+\item\label{item:213}  构建K-Means聚类模型。
+\item\label{item:214}  评价K-Means聚类模型。
+    \end{enumerate}
+  \end{minipage}
+
+  
+\end{description}
+
+
+\begin{center}
+  \zihao{4} \textbf{第8 章\quad 财政收入预测分析}
+\end{center}
+
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  财政收入预测的背景知识，分析步骤和流程。
+\item\label{item:215}  相关性分析方法与应用。
+\item\label{item:216}  用Lasso模型特征选取方法。
+\item\label{item:217}  灰色预测和支持向量回归算法的原理与应用
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  了解财政收入预测的背景知识，分析步骤和流程。
+\item\label{item:218}  掌握相关性分析方法与应用。
+\item\label{item:219}  掌握用Lasso模型特征选取方法。
+\item\label{item:220}  掌握灰色预测和支持向量回归算法的原理与应用。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学重点与难点]             重点:
+    （1） 财政收入预测的步骤和流程。
+    （2） 相关性分析方法与应用。
+    （3） 使用Lasso模型选取特征。
+    （4） 灰色预测算法的原理与使用。
+    （5） 支持向量回归算法的原理与使用。
+            难点:
+    （1） 使用Lasso模型选取特征。
+    （2） 灰色预测算法的原理与使用。
+    （3） 支持向量回归算法的原理与使用。
+\item[问题]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{description}
+    \item[1. 引导性提问]    
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item  市财政收入的构成是什么？
+\item\label{item:221}  影响财政收入的相关因素有哪些？
+\item\label{item:222}  市财政收入预测的意义在哪里？            
+\end{enumerate}
+\item[2. 探究性问题] 
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item  相关性分析的使用场景有哪些？
+\item\label{item:223}  Lasso回归使用场景有哪些？     
+\end{enumerate}
+\item[3. 拓展性问题] 
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item\label{item:225}  国家数据网有很多类似数据，能否预测某个省的财政收入呢？ 
+\end{enumerate}
+    \end{description}
+  \end{minipage}
+
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  分析财政收入预测背景。
+\item\label{item:226}  了解财政收入预测的方法。
+\item\label{item:227}  熟悉财政收入预测的步骤与流程。
+\item\label{item:228}  了解相关性分析。
+\item\label{item:229}  分析计算结果。
+\item\label{item:230}  了解Lasso回归方法。
+\item\label{item:231}  分析Lasso回归结果。
+\item\label{item:232}  了解灰色预测算法。
+\item\label{item:233}  了解SVR算法。
+\item\label{item:234}  分析预测结果。
+    \end{enumerate}
+  \end{minipage}
+
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  分析财政收入数据特征的相关性。
+\item\label{item:235}  使用Lasso回归选取财政收入预测的关键特征。
+\item\label{item:236}  使用灰色预测和SVR构建财政收入预测模型。
+\item\label{item:237}  评价SVR模型。
+    \end{enumerate}
+  \end{minipage}
+
+  
+\end{description}
+
+\begin{center}
+  \zihao{4} \textbf{第9 章\quad 家用热水器用户行为分析与事件识别}
+\end{center}
+
+\begin{description}
+\item[主要知识点]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 掌握用水事件划分原理及与方法。
+\item\label{item:238}  掌握阈值寻优的原理和方法。
+\item\label{item:239}  熟悉用水行为特征构建的原理与方法。
+\item\label{item:240}  了解神经网络算法的基本原理。
+\item\label{item:241}  掌握使用sklearn神经网络算法构建。
+\item\label{item:242}  掌握分类算法的评价方法。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学要求]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item  了解财政收入预测的背景知识，分析步骤和流程。
+\item\label{item:243}  掌握相关性分析方法与应用。
+\item\label{item:244}  掌握用Lasso模型特征选取方法。
+\item\label{item:245}  掌握灰色预测和支持向量回归算法的原理与应用。
+    \end{enumerate}
+  \end{minipage}
+
+\item[教学重点与难点]    重点:
+    （1） 家用热水器用户行为分析的步骤与流程。
+    （2） 用水事件划分原理及与方法。
+    （3） 阈值寻优的原理和方法。
+    （4） 用水行为特征构建的原理与方法。
+    （5） BP神经网络算法的原理与使用方法。
+            难点:
+    （1） 阈值寻优的原理和方法。
+    （2） BP神经网络算法的原理与使用方法。
+\item[问题]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{description}
+    \item[1. 引导性提问]       
+引导性提问需要教师根据教材内容和学生实际水平，提出问题，启发引导学生去解决问题，提问，从而达到理解、掌握知识，发展各种能力和提高思想觉悟的目的。
+\begin{enumerate}
+\item      什么样的电器可以称得上智能的？
+\item\label{item:246}  智能电器具备怎样的特征？
+\item\label{item:247}  智能热水器有需要怎样的条件，需要哪些数据？
+\end{enumerate}
+\item[2. 探究性问题]
+探究性问题需要教师深入钻研教材的基础上精心设计，提问的角度或者在引导性提问的基础上，从重点、难点问题切入，进行插入式提问。或者是对引导式提问中尚未涉及但在课文中又是重要的问题加以设问。
+\begin{enumerate}
+\item      如何划分用水事件
+\item\label{item:248}  如何确定用水时长？
+\item\label{item:249}  不同的用水时长可能代表了什么意义？
+\end{enumerate}
+\item[3. 拓展性问题] 
+拓展性问题需要教师深刻理解教材的意义，学生的学习动态后，根据学生学习层次，提出切实可行的关乎实际的可操作问题。亦可以提供拓展资料供学生研习探讨，完成拓展性问题。
+\begin{enumerate}
+\item      除了热水器还有什么日常生活电器可以智能化？
+\item\label{item:250}  做到这些电器智能化需要哪些数据，分析的核心因素是什么？ 
+\end{enumerate}
+    \end{description}
+  \end{minipage}
+
+\item[教学方法]课堂展示，教学条件使用多媒体教学，本章教学方法要注重理论和实际操作。
+\item[讲授教学环节]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item    分析家用热水器行业现状。
+\item\label{item:251}  了解热水器采集数据的基本情况。
+\item\label{item:252}  熟悉家用热水器用户行为分析的步骤与流程。
+\item\label{item:253}  删除冗余特征。
+item\label{item:260}  了解BP神经网络算法原理。
+\item\label{item:261}  构建模型。
+\item\label{item:262}  评估模型。
+    \end{enumerate}
+  \end{minipage}
+
+\item[实践教学部分]
+  \begin{minipage}[t]{0.8\linewidth}
+    \begin{enumerate}
+    \item 删除冗余特征。
+\item\label{item:263}  划分用水事件。
+\item\label{item:264}  确定单次用水事件的时长阈值。
+\item\label{item:265}  构建用水行为特征。
+\item\label{item:266}  筛选候选洗浴事件。
+\item\label{item:267}  构建BP神经网络模型。
+\item\label{item:268}  评价BP神经网络模型。
+    \end{enumerate}
+  \end{minipage}
+
+  
+\end{description}
+
+
+
+
+
+
+\section{课程资料:}
+
+\begin{enumerate}
+\item \textbf{教科书}\\  黄红梅，张良均．Python数据分析与应用[M]．北京：人民邮电出版社．2018．
+\item \textbf{参卡书目}
+  \begin{enumerate}
+ \item\label{item:70}    张良均．Python数据分析与挖掘实战[M]．北京：机械工业出版社．2015．
+\item\label{item:1} 	张良均．Python与数据挖掘[M]．北京：机械工业出版社．2016．
+\item\label{item:25}  Eric Matthes(袁国忠译). Python编程：从入门到实践[M].北京：人民邮电出版社.2016.
+\end{enumerate}
+\item\label{item:20}\textbf{电子文献链接}\\
+  \begin{enumerate}
+  \item http://www.diveintopython3.net/
+\item\label{item:2} https://www.cnblogs.com/dennis-liucd/p/7669161.html
+\item\label{item:3} https://docs.python.org/3/
+  \end{enumerate}
+\end{enumerate}
+
+\section{教学进度计划表}
+\newcounter{Rownumber}
+\newcommand{\Rown}{\stepcounter{Rownumber}\theRownumber}
+\begin{longtable}{B}\hline
+  \textbf{周次}& \textbf{课程要点}& \textbf{教学活动}& \textbf{阅读资料} \\ \hline
+  \Rown& 第1章 Python数据分析概述  &  数据分析的概念、流程、python安装  &   教材及参考书相关内容    \\ \hline
+  \Rown& 第2章 NumPy科学计算基础 &   生成随机数，创建矩阵，使用通用函数计算，以及利用NumPy进行数据分析的常用函数 &      教材及参考书相关内容 \\ \hline
+  \Rown & 第3章 Matplotlib可视化基础 &  pyplot绘图的基本语法，常用参数  &    教材及参考书相关内容   \\ \hline
+  \Rown &第4章 pandas统计分析基础（1） & DataFrame的常用属性，方法与描述性统计相关内容  &     教材及参考书相关内容  \\ \hline
+  \Rown& 第4章 pandas统计分析基础（2） &  时间数据的转换，信息提取与算术运算。剖析分组聚合方法groupby的原理  &     教材及参考书相关内容  \\ \hline
+  \Rown& 第5章 使用pandas进行数据预处理（1） &  数据清洗、数据合并、数据标准化和数据转换  &     教材及参考书相关内容  \\ \hline
+  \Rown& 第5章 使用pandas进行数据预处理（2） & 数据合并、数据标准化、 数据转换  &    教材及参考书相关内容   \\ \hline
+  \Rown& 第6章 使用sklearn构建模型（1） & 构建并评价聚类模型   &     教材及参考书相关内容  \\ \hline
+  \Rown& 第6章 使用sklearn构建模型（2） &构建并评价分类模型  &     教材及参考书相关内容  \\ \hline
+  \Rown& 第7章 航空公司客户价值分析（1） &  K-Means聚类算法在客户价值分析中的应用  &    教材及参考书相关内容   \\ \hline
+  \Rown& 第7章 航空公司客户价值分析（2） &  使用K-Means算法构建航空客户价值分析LRFMC模型  &   教材及参考书相关内容    \\ \hline
+  \Rown& 第8章 财政收入预测分析 & 财政收入预测的背景与方法、数据的特征   &      教材及参考书相关内容 \\ \hline
+  \Rown &第9章 家用热水器用户行为分析与事件识别 &  家用热水器用户行为分析的背景与步骤、数据预处理  &  教材及参考书相关内容     \\ \hline
+  \Rown&  复习    & &     \\ \hline
+\multicolumn{4}{|l|}{注：每周4学时，14周，另有10节课和学生商定后，找时间补出}     \\ \hline
+\end{longtable}
+
+
+
+\section{教学活动与预期成果的评估}
+\begin{enumerate}
+\item\label{item:24} \textbf{教学活动：}
+\begin{enumerate}
+\item\label{item:26} 课堂讲授
+\item\label{item:27} 案例分析
+\item\label{item:29} 课堂问答
+\end{enumerate}
+\item\label{item:32} \textbf{对预期学习成果的考察}\\ 
+
+  \begin{tabular}[h]{|l|l|l|}\hline
+    \textbf{预期学习成果}& \textbf{教学活动}& \textbf{评估方式}\\ \hline
+                       掌握python软件的基本编程  & 课堂讲解和实训  & 平时+期末成绩 \\ \hline
+                        会用python常用的数据分析包使用 & 课堂讲解和实训 &  平时+期末成绩\\ \hline
+                        掌握教材中三个数据分析案例 & 课堂讲解和实训 & 上机实操  \\ \hline
+      \end{tabular}
+\end{enumerate}
+
+
+\section{评分体系与标准（评分项目不少于3项）}
+\begin{enumerate}
+\item\label{item:33}\textbf{评分体系}
+    \begin{enumerate}
+  \item 出勤：    $10  \%   $
+\item\label{item:23} 课堂提问：   $10 \% $
+      
+\item\label{item:40} 上机考核：     $30\%$
+\item\label{item:41} 作业：   $10  \%$
+\item\label{item:42} 期末考试：   $40  \%$
+  \end{enumerate}
+            
+\item\label{item:34} \textbf{评分标准}\\
+
+  \begin{longtable}{|>{\songti}p{140mm}|}\hline
+  \textbf{ 课堂参与度} (30\%)\\ \hline
+1）课前预习\\ \hline
+2）全勤\\ \hline
+3）积极回答问题，参与课堂讨论\\ \hline
+\textbf{计算机操作} (30\%)\\ \hline
+1）课后实训练习\\ \hline
+2）案例分析作业\\ \hline
+3）能独立完成、结论符合逻辑\\ \hline
+\textbf{期末考试}  (40\% )\\ \hline
+1）基本概念、基础知识\\ \hline
+2）数据分析的基本方法\\ \hline
+3）利用python进行案例分析\\ \hline
+  \end{longtable}
+
+
+\end{enumerate}
+
+期末考试（闭卷考试）成绩占40\%，平时的课程参与度和作业累计占60\%（参考以上评分标准）。
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
