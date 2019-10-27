@@ -53,8 +53,6 @@ plt.plot(rad,np.cos(rad))## 添加cos曲线
 plt.legend(['sin','cos'])
 plt.savefig('../tmp/sincos.png')
 plt.show()
-
-
 # 代码 3-3
 ## 原图
 x = np.linspace(0, 4*np.pi)## 生成x轴数据
@@ -63,7 +61,7 @@ plt.plot(x,y,label="$sin(x)$")## 绘制sin曲线图
 plt.title('sin')
 plt.savefig('../tmp/默认sin曲线.png')
 plt.show()
-
+os.
 ## 修改rc参数后的图
 plt.rcParams['lines.linestyle'] = '-.'
 plt.rcParams['lines.linewidth'] = 3
