@@ -78,9 +78,9 @@ print("登陆次数:",pupidgp.size())
 import pandas as pd;
 import numpy as np
 from sqlalchemy import create_engine
-Master=pd.read_csv('data\第4章\Training_Master.csv’,sep=',encoding="gbk")
-Userupdate=pd.read_csv('data\第4章\Training_Userupdate.csv’,sep=',encoding="gbk")
-LogInfo=pd.read_csv('data\第4章\Training_LogInfo.csv',sep=',encoding="gbk")
+Master=pd.read_csv('data\第4章\Training_Master.csv’,sep=',',encoding="gbk")
+Userupdate=pd.read_csv('data\第4章\Training_Userupdate.csv’,sep=',',encoding="gbk")
+LogInfo=pd.read_csv('data\第4章\Training_LogInfo.csv',sep=',',encoding="gbk")
 detail=pd.read_sql_table('meal_oeder_detaill',con=engine)
 print("Master表长宽转换前的形状：",Master.shape)
 print("Userupdate表长宽转换前的形状：",Userupdate.shape)
