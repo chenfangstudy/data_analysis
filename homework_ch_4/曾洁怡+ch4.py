@@ -64,7 +64,7 @@ import pandas as pd;
 import numpy as np
 from sqlalchemy import create_engine
 engine=create_engine('data\第4章\Training_LogInfo.csv',sep=',',encoding='gbk')
-engine=create_engine(''data\第4章\Training_Userupdate.csv',sep=',',encoding='gbk')
+engine=create_engine('data\第4章\Training_Userupdate.csv',sep=',',encoding='gbk')
 detail=pd.read_sq_table('meal_order_detaill',con=engine)
 print(detail.[['Idx','Listinginfo1','LogInfo1','LogInfo2','LogInfo3']].groupby(by='Idx')
 print(detail.[['Idx','ListingInfo1','UserupdateInfo1','UserupdateInfo2']].groupby(by='Idx'))
