@@ -4,40 +4,45 @@ Type "copyright", "credits" or "license()" for more information.
 import pandas as pd
 import numpy as np
 
-Mas=pd.read_csv("C:\Users\3SXL_21128\Desktop\ch4\ch4-实训数据\Training_Master.csv",encoding="gbk")
-User=pd.read_csv("C:\Users\3SXL_21128\Desktop\ch4\ch4-实训数据\Training_Userupdate.csv",encoding="gbk")
-Log=pd.read_csv("C:\Users\3SXL_21128\Desktop\ch4\ch4-实训数据\Training_LogInfo.csv",encoding="gbk")
-print("主表的维度为：",Mas.ndim)
-print("主表的形状为：",Mas.shape)
-print("主表的占用内存信息为：",Mas.memory_usage())
+ppd = pd.read_csv('data\第4章\Training_Master.csv',sep=',',encoding="gbk")
 
-print("用户信息表的维度为：",User.ndim)
-print("用户信息表的形状为：",User.shape)
-print("用户信息表的占用内存信息为：",User.memory_usage())
+print(ppd.ndim)#维度
 
-print("登录信息表的维度为：",Log.ndim)
-print("登录信息表的形状为：",Log.shape)
-print("登录信息表的占用内存信息为：",Log.memory_usage())
+print(ppd.shape)#大小
 
-print(Mas.describe())#描述性统计
-#定义一个函数剔除全为空值的列和标准差为0的列
+print(ppd.memory_usage())#内存信息
+
+print(ppd.describe())
+
 def dropNullStd(data):
+
     beforelen = data.shape[1]
+
     colisNull = data.describe().loc['count'] == 0
+
     for i in range(len(colisNull)):
+
         if colisNull[i]:
+
             data.drop(colisNull.index[i],axis=1,inplace=True)
+
     
+
     stdisZero = data.describe().loc['std'] == 0
+
     for i in range(len(stdisZero)):
+
         if stdisZero[i]:
+
             data.drop(stdisZero.index[i],axis=1,inplace=True)
+
     afterlen = data.shape[1]
+
     print('剔除的列的数目为：',beforelen-afterlen)
+
     print('剔出后数据的形状为：',data.shape)
-dropNullStd(Mas)#使用dropNullStd函数对信息表操作
-dropNullStd(User)
-dropNullStd(Log)
+
+dropNullStd(ppd)
 
 #实训2
 User=pd.read_csv("C:\Users\3SXL_21128\Desktop\ch4\ch4-实训数据\Training_Userupdate.csv",encoding="gbk")
